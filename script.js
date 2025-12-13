@@ -12,3 +12,9 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(reveal => observer.observe(reveal));
+
+const playBtn = document.getElementById("playAudioBtn");
+
+playBtn.addEventListener("click", () => {
+  alert("Audio would play here! Backend will handle TTS soon 😉");
+});
