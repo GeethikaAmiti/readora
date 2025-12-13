@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Readora — Text to Audio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content reveal">
+      <h1>Text → Audio</h1>
+      <p>Turn your text or PDF into beautiful audio.</p>
+    </div>
+  </section>
+
+  <!-- UPLOAD / TEXT AREA -->
+  <section class="features">
+    <h2 class="section-title reveal">Upload or Paste Text</h2>
+
+    <div class="card-container">
+      <div class="card reveal">
+        <h3>Paste Text</h3>
+        <textarea id="textInput" rows="6" placeholder="Type or paste your text here..."></textarea>
+      </div>
+
+      <div class="card reveal">
+        <h3>Upload PDF / TXT</h3>
+        <input type="file" id="fileInput" accept=".pdf,.txt" />
+      </div>
+
+      <div class="card reveal">
+        <h3>Choose Voice</h3>
+        <select id="voiceSelect">
+          <option value="female1">Female 1</option>
+          <option value="female2">Female 2</option>
+          <option value="male1">Male 1</option>
+          <option value="male2">Male 2</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card reveal" style="text-align:center; margin-top:2rem;">
+      <button class="primary-btn" id="playAudioBtn">Play Audio</button>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
