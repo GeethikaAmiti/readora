@@ -137,3 +137,25 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+input[type="file"], select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+#playAudioBtn {
+  background-color: #cbb8a8;
+}
