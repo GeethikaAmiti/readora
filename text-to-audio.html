@@ -22,42 +22,63 @@
     </div>
   </section>
 
-  <!-- UPLOAD / TEXT AREA -->
+  <!-- FORM SECTION -->
   <section class="features">
     <h2 class="section-title reveal">Upload or Paste Text</h2>
 
-    <div class="card-container">
-      <div class="card reveal">
-        <h3>Paste Text</h3>
-        <textarea id="textInput" rows="6" placeholder="Type or paste your text here..."></textarea>
+    <!-- 🔽 THIS IS THE IMPORTANT FORM -->
+    <form
+      action="/text-to-audio"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+
+      <div class="card-container">
+
+        <!-- TEXT INPUT -->
+        <div class="card reveal">
+          <h3>Paste Text</h3>
+          <textarea
+            name="textInput"
+            rows="6"
+            placeholder="Type or paste your text here..."
+          ></textarea>
+        </div>
+
+        <!-- FILE INPUT -->
+        <div class="card reveal">
+          <h3>Upload PDF / TXT</h3>
+          <input
+            type="file"
+            name="fileInput"
+            accept=".pdf,.txt"
+          />
+        </div>
+
+        <!-- VOICE SELECTION -->
+        <div class="card reveal">
+          <h3>Choose Voice</h3>
+          <select name="voiceSelect">
+            <option value="female1">Female 1</option>
+            <option value="female2">Female 2</option>
+            <option value="male1">Male 1</option>
+            <option value="male2">Male 2</option>
+          </select>
+        </div>
+
       </div>
 
-      <div class="card reveal">
-        <h3>Upload PDF / TXT</h3>
-        <input type="file" id="fileInput" accept=".pdf,.txt" />
+      <!-- SUBMIT BUTTON -->
+      <div class="card reveal" style="text-align:center; margin-top:2rem;">
+        <button type="submit" class="primary-btn">
+          Play Audio
+        </button>
       </div>
 
-      <div class="card reveal">
-        <h3>Choose Voice</h3>
-        <select id="voiceSelect">
-          <option value="female1">Female 1</option>
-          <option value="female2">Female 2</option>
-          <option value="male1">Male 1</option>
-          <option value="male2">Male 2</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="card reveal" style="text-align:center; margin-top:2rem;">
-      <button class="primary-btn" id="playAudioBtn">Play Audio</button>
-    </div>
+    </form>
+    <!-- 🔼 FORM ENDS HERE -->
 
   </section>
-  <form action="/text-to-audio" method="POST" enctype="multipart/form-data">
-  <!-- Paste your text area, file input, voice select -->
-  <button type="submit" class="primary-btn">Play Audio</button>
-</form>
-
 
   <script src="script.js"></script>
 </body>
